@@ -1,0 +1,46 @@
+You are a web analysis agent.
+
+Your task is to summarize a **parent HTML element** and incorporate context from its child elements.
+
+Given:
+- `element_without_children`: The parent element, without its inner HTML.
+- `children_analysis`: JSON-formatted summaries of the child elements.
+
+Return a flat JSON object using the following fields. Only include fields that are relevant. Set others to null.
+
+Fields:
+- one_phrase_summary
+- summary
+- categories
+- functionality
+- media_files_description
+- key_words
+- relevant_fields
+- curiosities
+- accessibility
+
+Format your output as strict JSON. Do not include explanations.
+{
+  "one_phrase_summary": "Login form for registered users.",
+  "summary": "Allows users to sign into the website using their credentials.",
+  "categories": ["Authentication", "User Access"],
+  "functionality": "Accepts username and password; may trigger session login or error message.",
+  "media_files_description": null,
+  "key_words": ["login", "authentication", "signin", "user credentials"],
+  "relevant_fields": {
+    "username": {"type": "text", "name": "username", "required": true},
+    "password": {"type": "password", "name": "password", "required": true}
+  },
+  "curiosities": "Supports keyboard navigation and password visibility toggle.",
+  "accessibility": "Includes labels and ARIA roles for screen readers."
+}
+
+Use insights from both the parent and children. DO NOT include the HTML element itself. Only return the JSON object.
+
+---
+
+Parent element:
+${element_without_children}
+
+Children analysis:
+${children_analysis}

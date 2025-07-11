@@ -1,0 +1,33 @@
+You are an expert in web automation. Analyze the given HTML element and output a JSON object with the following fields. Only include fields that are meaningful — otherwise use null.
+
+Fields to include:
+- one_phrase_summary
+- summary
+- categories
+- functionality
+- media_files_description
+- key_words
+- relevant_fields
+- curiosities
+- accessibility
+
+Format the output as flat JSON. Do not include explanations or the HTML itself.
+
+Now analyze this element:
+${element}
+
+Format your output as strict JSON. Do not include explanations.
+{
+  "one_phrase_summary": "Login form for registered users.",
+  "summary": "Allows users to sign into the website using their credentials.",
+  "categories": ["Authentication", "User Access"],
+  "functionality": "Accepts username and password; may trigger session login or error message.",
+  "media_files_description": null,
+  "key_words": ["login", "authentication", "signin", "user credentials"],
+  "relevant_fields": {
+    "username": {"type": "text", "name": "username", "required": true},
+    "password": {"type": "password", "name": "password", "required": true}
+  },
+  "curiosities": "Supports keyboard navigation and password visibility toggle.",
+  "accessibility": "Includes labels and ARIA roles for screen readers."
+}

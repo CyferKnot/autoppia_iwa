@@ -1,0 +1,37 @@
+/*__pycache__/
+__pycache__/
+*.pyc
+*.config
+notebooks/
+.ipynb_checkpoints
+.env
+.venv
+env/
+venv/
+.idea
+data/web_analysis_files/*
+*.gif
+*.egg-info
+build/
+~
+.vscode
+# You can comment to connit the evaluation image as wwll
+output.png
+
+# benchmark entry point logs
+benchmark.log
+
+# For Task Comparison images
+results/*.png
+# Stress Tests result
+results/*.json
+
+# logs directory
+logs/*
+
+# Stress test logs
+stress_test.log
+
+
+data/solutions_cache/*
+data/tasks_cache/*
